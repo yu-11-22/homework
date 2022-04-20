@@ -23,7 +23,7 @@
             <div class="col-md-3 offset-1"><a href="example03.php" target="main" class="btn btn-blue">題目三:尋找質數程式</a></div>
         </div>
     </div>
-    <iframe frameborder="0" id="main" name="main" width="100%" height="768px"></iframe>
+    <iframe frameborder="0" id="main" name="main" width="100%" height="475px"></iframe>
 </body>
 <!-- bootstrap JS -->
 <script type="text/javascript" src="bootstrap-4.6.1-dist/js/jquery.min.js"></script>

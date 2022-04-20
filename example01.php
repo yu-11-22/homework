@@ -45,7 +45,7 @@
             $data[$i] = rand(1, 100000);
         }
         $size = count($data);
-        echo "排列前的順序為:";
+        echo "排列前的順序為:<br>";
         print_r($data);
         echo "<br>";
         for ($i = 0; $i < $size; $i++) {
@@ -54,7 +54,7 @@
             array_push($newData, $minD);
             unset($data[$key]);
         }
-        echo "排列後的順序為:";
+        echo "<hr>排列後的順序為:<br>";
         print_r($newData);
     }
     function sortArr2()
@@ -64,7 +64,7 @@
             $data[$i] = rand(1, 100000);
         }
         $size = count($data);
-        echo "排列前的順序為:";
+        echo "排列前的順序為:<br>";
         print_r($data);
         echo "<br>";
         for ($i = 0; $i < $size; $i++) {
@@ -73,7 +73,7 @@
             array_push($newData, $maxD);
             unset($data[$key]);
         }
-        echo "排列後的順序為:";
+        echo "<hr>排列後的順序為:<br>";
         print_r($newData);
     }
     ?>
