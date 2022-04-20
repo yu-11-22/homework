@@ -41,14 +41,26 @@
         echo"<p>所需時間:".(($end-$start)*1000)."ms</p>";
     }
     function chk_prime($intnumber){
+        if (!isNum($intnumber)){
+            return false;
+            }
+            if (!isInteger($intnumber)){
+            return false;
+            }
         $chkRange=$intnumber;
-        for($i=2; $i<$chkRange/2 ;$i=$i+1){
+        for($i=2; $i<Math.sqrt($chkRange) ;$i=$i+1){
             if($intnumber % $i ==0){
                 return false;
             }
         }
         return true;
     }
+    function isInteger($intnumber){
+        return $intnumber == ~~$intnumber ? true : false;
+        }
+        function isNum($intnumber){
+        return $intnumber ==  $intnumber ? true : false;
+        } 
     ?>
 </body>
 </html>
