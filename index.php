@@ -18,7 +18,7 @@
         <a href="example03.php" target="main">題目三:尋找質數程式</a>
     </div>
 
-    <iframe frameborder="0" id="main" name="main" width="1024px" height="a768px"></iframe>
+    <iframe frameborder="0" id="main" name="main" width="1024px" height="768px"></iframe>
 </body>
 
 </html>
