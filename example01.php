@@ -54,7 +54,7 @@
             array_push($newData, $minD);
             unset($data[$key]);
         }
-        echo "<hr>排列後的順序為:<br>";
+        echo "<hr>由小到大排列後的順序為:<br>";
         print_r($newData);
     }
     function sortArr2()
@@ -73,7 +73,7 @@
             array_push($newData, $maxD);
             unset($data[$key]);
         }
-        echo "<hr>排列後的順序為:<br>";
+        echo "<hr>由大到小排列後的順序為:<br>";
         print_r($newData);
     }
     ?>
