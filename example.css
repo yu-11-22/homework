@@ -1,0 +1,32 @@
+*{
+    background: #FFF;
+    color: #30cade;
+    text-align:center;
+    font-size:1.2rem;
+    box-sizing: border-box;
+}
+
+.title{
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: #16636d;
+    /* text-decoration: underline; */
+}
+
+input[type=text]{
+    margin: 0.8rem;
+    color:#FFF;
+    border: 2px solid #16636d62;
+    background-color: #30cade;
+    border-radius: 10px;
+    height: 1.5rem;
+}
+
+input[type=text]:focus{
+    
+}
+
+input[type=submit]{
+    border: 2px solid #16636d;
+    border-radius: 10px;
+}

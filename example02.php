@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>阿拉伯數字轉成國字</title>
+    <link rel="stylesheet" href="example.css">
 </head>
 <body>
     <?php 
@@ -15,7 +16,7 @@
     }
     ?>
     <form action="example02.php" method="post" name="form1" id="form1">
-        <p>阿拉伯數字轉成國字程式</p>
+        <p class="title">阿拉伯數字轉成國字程式</p>
         <p>
             <label>請輸入要轉換的阿拉伯數字<br>
                 <input type="text" name="number01" value="<?php echo $default_val; ?>" id="number01">

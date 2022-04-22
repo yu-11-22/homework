@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>陣列排序程式</title>
+    <title>亂數陣列排序</title>
+    <link rel="stylesheet" href="example.css">
 </head>
 
 <body>
     <form action="example01.php" method="post" id="form1" name="form1">
-        <p>陣列排序程式</p>
+        <p class="title">亂數陣列排序</p>
         <p>亂數產生5000陣列:</p>
         <p>設定排序方式
             <label><input type="radio" name="RadioGroup1" value="1" id="RadioGroup1_0" checked="checked">由小到大排序</label>

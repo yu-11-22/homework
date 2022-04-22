@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>尋找質數PHP質數</title>
+    <link rel="stylesheet" href="example.css">
 </head>
 <body>
     <?php
@@ -15,7 +16,7 @@
     }
     ?>
     <form action="example03.php" method="post" name="form1" id="form1">
-        <p>尋找質數PHP程式:</p>
+        <p class="title">尋找質數程式</p>
         <p><label>請輸入要找尋多少個質數: <br> <input type="text" name="number01" value="<?php echo $default_val; ?>" id="number01" ></label></p>
         <input type="hidden" name="MM_form" id="MM_form" value="form1">
         <p><input type="submit" name="button" id="button" value="開始找尋"> </p>
