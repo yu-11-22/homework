@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>亂數陣列排序</title>
     <link rel="stylesheet" href="example.css">
-     <!-- bootstrap css -->
-    <link rel="stylesheet" href="bootstrap-4.6.1-dist/css/bootstrap.css">
 </head>
 
 <body>

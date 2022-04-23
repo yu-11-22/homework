@@ -27,6 +27,36 @@ input[type=text]:focus{
 }
 
 input[type=submit]{
-    border: 2px solid #16636d;
-    border-radius: 10px;
+    cursor: pointer;
+    color: #000;
+    font-size: 1rem;
+    padding: 0.3rem;
+    border: 1px solid #43b1b0;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+input[type=submit]:hover {
+    color: #fff;
+    background-color: #43b1b0;
+    border-color: #2aacaa;
+}
+
+input[type=submit]:focus {
+    box-shadow: 0 0 0 0.2rem rgba(124, 216, 208, 0.858);
+}
+
+input[type=submit]:disabled {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+input[type=submit]:not(:disabled):not(.disabled):active{
+    color: #fff;
+    background-color: #46fffc;
+    border-color: #2aacaa;
+}
+
+input[type=submit]:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(76, 237, 255, 0.582);
 }
