@@ -6,16 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>陣列排序程式</title>
+     <!-- bootstrap css -->
+    <link rel="stylesheet" href="bootstrap-4.6.1-dist/css/bootstrap.css">
 </head>
 
 <body>
     <form action="example01.php" method="post" id="form1" name="form1">
-        <p>陣列排序程式</p>
-        <p>亂數產生5000陣列:</p>
-        <p>設定排序方式
-            <label><input type="radio" name="RadioGroup1" value="1" id="RadioGroup1_0" checked="checked">由小到大排序</label>
-            <label><input type="radio" name="RadioGroup1" value="2" id="RadioGroup1_1">由大到小排序</label>
-        </p>
+    <div class="card-header bg-transparent border-info"></div>
+  <div class="card border-info md-3">
+    <div class="card-body text-info">題目一:陣列排序程式
+    <h5 class="card-title">亂數產生5000陣列:</h5>
+    <div class="card-body text-info">設定排序方式
+    <label><input type="radio" name="RadioGroup1" value="1" id="RadioGroup1_0" checked="checked">由小到大排序</label>
+        <label><input type="radio" name="RadioGroup1" value="2" id="RadioGroup1_1">由大到小排序</label>
+      
+    </div>
+  </div>
+           
+        
         <p>
             <input type="hidden" name="MM_form" id="MM_form" value="form1">
         </p>
@@ -79,4 +87,7 @@
     ?>
 </body>
 
+<!-- bootstrap JS -->
+<script type="text/javascript" src="bootstrap-4.6.1-dist/js/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
 </html>
