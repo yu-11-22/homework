@@ -91,37 +91,37 @@
     function num2cht($num){
         $numc ="零,壹,貳,參,肆,伍,陸,柒,捌,玖";
         $unic = ",拾,佰,仟";
-        $unic1 = "元整,萬,億,兆,京";
+        $unic1 = ",萬,億,兆,京";
         $numc_arr = explode(",", $numc);
         $unic_arr = explode(",", $unic);
         $unic1_arr = explode(",", $unic1);
-        $i = str_replace(",","", $num);
+        $i = str_replace(",","", $num); //把每個數字中間加上,
         $c0 = 0;
         $str = array();
         do{
             $aa = 0;
             $c1 = 0;
             $s = "";
-            $lan = (strlen($i) >= 4) ? 4 : strlen($i);
+            $lan = (strlen($i) >= 4) ? 4 : strlen($i); //strlen為回傳字串長度，以四個數字為一個單位
             $j = substr($i, -$lan);
-            while($j > 0){
-                $k = $j % 10;
+            while($j > 0){ //選取後四位的數字
+                $k = $j % 10; //將四位數除以10取餘數
                 if($k > 0) {
                     $aa = 1;
                     $s = $numc_arr[$k].$unic_arr[$c1].$s;
                 }elseif($k == 0) {
                     if($aa == 1) $s = "0".$s;
                 }
-                $j = intval($j / 10);
+                $j = intval($j / 10); //intval回傳整數
                 $c1 += 1;
             }
             $str[$c0] = ($s == '') ? '' : $s.$unic1_arr[$c0];
             $count_len = strlen($i) - 4;
-            $i = ($count_len > 0) ? substr($i, 0, $count_len) : '';
-            $c0 += 1;
+            $i = ($count_len > 0) ? substr($i, 0, $count_len) : ''; //只取未處理的數值
+            $c0 += 1; //進位用(萬、億、兆、京)
         }while($i != "");
         $string = "";
-        foreach($str as $value) $string .= array_pop($str);
+        foreach($str as $value) $string .= array_pop($str); //刪除最尾端的空值
         $string = preg_replace('/0+/', '零', $string);
         return $string;
     }
@@ -137,7 +137,16 @@
     <?php
     if(isset($_POST['MM_form']) and $_POST['MM_form']=='form1'){
         echo "<p>轉換值:".$_POST['number01']."</p>";
-        echo "<p>轉換結果:".num2cht($_POST['number01'])."</p>";
+        echo "<p>轉換結果:".num2cht($_POST['number01'])."元整</p>";
+    }
+    $abc = "100001000";
+    $i = str_replace(",","",$abc);
+    echo $i;
+    if (strlen($i) > 4){
+        $num_arr = explode (",",$i);
+        print_r($num_arr);
+    }else{
+        echo $abc ;
     }
     ?>
 </body>

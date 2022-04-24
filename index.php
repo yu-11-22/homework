@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>php互動式程式設計作業</title>
 
     <!-- bootstrap css -->
     <link rel="stylesheet" href="bootstrap-4.6.1-dist/css/bootstrap.css">
@@ -37,7 +37,7 @@
     </div>
     <iframe frameborder="0" id="main" name="main" width="100%" height="730px"></iframe>
   </div>
-
+  <div id="footer"></div>
 </body>
 <!-- bootstrap JS -->
 <script type="text/javascript" src="bootstrap-4.6.1-dist/js/jquery.min.js"></script>
