@@ -98,8 +98,8 @@
         $i = str_replace(",","", $num); //把每個數字中間加上,
         $c0 = 0;
         $str = array();
-        $lanN = (strlen($i) >= 4) ? 4 : strlen($i);
-        $jN = substr($i, -$lanN);
+        $jN = substr($i, -4);
+        $jM = substr($i, -8 ,4);
         do{
             $aa = 0;
             $c1 = 0;
@@ -117,7 +117,9 @@
                 $j = intval($j / 10); //intval回傳整數
                 $c1 += 1;
             }
-            if ($c0 >= 1 && $jN < 1000){
+            if ($c0 == 1 && $jN < 1000){
+                $str[$c0-1]= "0".$str[$c0-1];
+            }elseif ($c0 == 2 && $jM < 1000){
                 $str[$c0-1]= "0".$str[$c0-1];
             }
             $str[$c0] = ($s == '') ? '' : $s.$unic1_arr[$c0];
