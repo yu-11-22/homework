@@ -79,8 +79,3 @@
     }
     ?>
 </body>
-
-<!-- bootstrap JS -->
-<script type="text/javascript" src="bootstrap-4.6.1-dist/js/jquery.min.js"></script>
-<script type="text/javascript" src="bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
-</html>

@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <iframe frameborder="0" id="main" name="main" width="100%" height="730px"></iframe>
+    <iframe frameborder="0" id="main" name="main" width="100%" height="260px"></iframe>
   </div>
   <div id="footer"></div>
 </body>

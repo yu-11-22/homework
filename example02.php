@@ -115,6 +115,9 @@
                 $j = intval($j / 10); //intval回傳整數
                 $c1 += 1;
             }
+            if ($c0 >= 1 && $j < 1000){
+                $str[$c0-1]= "0".$str[$c0-1];
+            }
             $str[$c0] = ($s == '') ? '' : $s.$unic1_arr[$c0];
             $count_len = strlen($i) - 4;
             $i = ($count_len > 0) ? substr($i, 0, $count_len) : ''; //只取未處理的數值
@@ -137,16 +140,11 @@
     <?php
     if(isset($_POST['MM_form']) and $_POST['MM_form']=='form1'){
         echo "<p>轉換值:".$_POST['number01']."</p>";
-        echo "<p>轉換結果:".num2cht($_POST['number01'])."元整</p>";
-    }
-    $abc = "100001000";
-    $i = str_replace(",","",$abc);
-    echo $i;
-    if (strlen($i) > 4){
-        $num_arr = explode (",",$i);
-        print_r($num_arr);
-    }else{
-        echo $abc ;
+        if (mb_substr(num2cht($_POST['number01']),-1,1,"utf-8") == "零"){
+            echo "<p>轉換結果:".mb_substr(num2cht($_POST['number01']),0,-1,"utf-8")."元整</p>";
+        }else{
+            echo "<p>轉換結果:".num2cht($_POST['number01'])."元整</p>";
+        }
     }
     ?>
 </body>
