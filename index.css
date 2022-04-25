@@ -132,7 +132,7 @@ h1 {
 body {
     /* color: #fff; */
     /* height: 176px; */
-    background: linear-gradient(270deg, #28e0b0, #c328e0, #28a1e0, #e0286b) center / cover;
+    background: linear-gradient(270deg, #2aacaa, #6ddbd9, #edfc1a, #28a1e0) center / cover;
     background-size: 800% 800%;
     -webkit-animation: AnimationName 30s ease infinite;
     -moz-animation: AnimationName 30s ease infinite;
