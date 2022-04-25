@@ -22,22 +22,23 @@
     </div>
   </div>
 
-  <div class="card-header bg-transparent border-info"></div>
+  <!-- <div class="card-header bg-transparent border-info"></div> -->
 
   <div class="card border-info md-3">
     <div class="card-body text-info">
-      <h5 class="card-title"></h5>
+      <!-- <h5 class="card-title"></h5> -->
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-3 offset-1"><a href="example01.php" target="main" class="btn btn-outline-primary">亂數陣列排序</a></div>
-          <div class="col-md-3 offset-1"><a href="example02.php" target="main" class="btn btn-outline-primary">阿拉伯數字轉成國字</a></div>
-          <div class="col-md-3 offset-1"><a href="example03.php" target="main" class="btn btn-outline-primary ">尋找質數程式</a></div>
+          <div class="col-3 col-md-3 offset-1"><a href="example01.php" target="main" class="btn btn-outline-primary">亂數陣列排序</a></div>
+          <div class="col-3 col-md-3 offset-1"><a href="example02.php" target="main" class="btn btn-outline-primary">阿拉伯數字轉成國字</a></div>
+          <div class="col-3 col-md-3 offset-1"><a href="example03.php" target="main" class="btn btn-outline-primary ">尋找質數程式</a></div>
         </div>
       </div>
     </div>
     <iframe frameborder="0" id="main" name="main" width="100%" height="260px"></iframe>
   </div>
-  <div id="footer"></div>
+  <!-- <img src="images/05.gif" alt=""> -->
+  <div id="footer"><img src="images/06.gif" alt=""></div>
 </body>
 <!-- bootstrap JS -->
 <script type="text/javascript" src="bootstrap-4.6.1-dist/js/jquery.min.js"></script>
