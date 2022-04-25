@@ -23,59 +23,83 @@
         <p><input type="submit" name="button" id="button" value="開始排序"></p>
     </form>
     <?php
-    ini_set("error_reporting", "E_ALL & ~E_NOTICE");
+    for ($i = 0; $i < 5000; $i++) {
+        $data[$i] = rand(1, 100000);
+    }
+    $newData = array();
     if (isset($_POST['MM_form']) and $_POST['MM_form'] == 'form1') {
         if ($_POST['RadioGroup1'] == '1') {
-            $start = microtime();
-            echo sortArr1();
-            $end = microtime();
+            echo "排列前的順序為:<br>";
+            print_r($data);
+            echo "<br>";
+            $start = microtime(true);
+            for ($i = 0; $i < 5000; $i++) {
+                $minD = min($data);
+                $key = array_search($minD, $data);
+                array_push($newData, $minD);
+                unset($data[$key]);
+            }
+            $end = microtime(true);
+            echo "<hr>由小到大排列後的順序為:<br>";
+            print_r($newData);
             $showData = ($end - $start) * 1000;
             echo "<br><p>所需時間:" . $showData . "ms</p>";
-        } elseif ($_POST['RadioGroup1'] == '2') {
-            $start = microtime();
-            echo sortArr2();
-            $end = microtime();
+        }
+        if ($_POST['RadioGroup1'] == '2') {
+            echo "排列前的順序為:<br>";
+            print_r($data);
+            echo "<br>";
+            $start = microtime(true);
+            for ($i = 0; $i < 5000; $i++) {
+                $maxD = max($data);
+                $key = array_search($maxD, $data);
+                array_push($newData, $maxD);
+                unset($data[$key]);
+            }
+            $end = microtime(true);
+            echo "<hr>由大到小排列後的順序為:<br>";
+            print_r($newData);
             $showData = ($end - $start) * 1000;
             echo "<br><p>所需時間:" . $showData . "ms</p>";
         }
     }
-    function sortArr1()
-    {
-        $newData = array();
-        for ($i = 0; $i < 5000; $i++) {
-            $data[$i] = rand(1, 100000);
-        }
-        $size = count($data);
-        echo "排列前的順序為:<br>";
-        print_r($data);
-        echo "<br>";
-        for ($i = 0; $i < $size; $i++) {
-            $minD = min($data);
-            $key = array_search($minD, $data);
-            array_push($newData, $minD);
-            unset($data[$key]);
-        }
-        echo "<hr>由小到大排列後的順序為:<br>";
-        print_r($newData);
-    }
-    function sortArr2()
-    {
-        $newData = array();
-        for ($i = 0; $i < 5000; $i++) {
-            $data[$i] = rand(1, 100000);
-        }
-        $size = count($data);
-        echo "排列前的順序為:<br>";
-        print_r($data);
-        echo "<br>";
-        for ($i = 0; $i < $size; $i++) {
-            $maxD = max($data);
-            $key = array_search($maxD, $data);
-            array_push($newData, $maxD);
-            unset($data[$key]);
-        }
-        echo "<hr>由大到小排列後的順序為:<br>";
-        print_r($newData);
-    }
+    // $size = count($data);
+    // ini_set("error_reporting", "E_ALL & ~E_NOTICE");
+    // if (isset($_POST['MM_form']) and $_POST['MM_form'] == 'form1') {
+    //     if ($_POST['RadioGroup1'] == '1') {
+    //         echo "排列前的順序為:<br>";
+    //         print_r($data);
+    //         echo "<br>";
+    //         $start = microtime(true);
+    //         for ($i = 0; $i < 5000; $i++) {
+    //             $minD = min($data);
+    //             $key = array_search($minD, $data);
+    //             array_push($newData, $minD);
+    //             unset($data[$key]);
+    //         }
+    //         $end = microtime(true);
+    //         echo "<hr>由小到大排列後的順序為:<br>";
+    //         print_r($newData);
+    //         $showData = ($end - $start) * 1000;
+    //         echo "<br><p>所需時間:" . $showData . "ms</p>";
+    //     }
+    //     if ($_POST['RadioGroup1'] == '2') {
+    //         echo "排列前的順序為:<br>";
+    //         print_r($data);
+    //         echo "<br>";
+    //         $start = microtime(true);
+    //         for ($i = 0; $i < 5000; $i++) {
+    //             $maxD = max($data);
+    //             $key = array_search($maxD, $data);
+    //             array_push($newData, $maxD);
+    //             unset($data[$key]);
+    //         }
+    //         $end = microtime(true);
+    //         echo "<hr>由大到小排列後的順序為:<br>";
+    //         print_r($newData);
+    //         $showData = ($end - $start) * 1000;
+    //         echo "<br><p>所需時間:" . $showData . "ms</p>";
+    //     }
+    // }
     ?>
 </body>

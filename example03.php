@@ -24,11 +24,11 @@
     <?php
     ini_set("error_reporting","E_ALL & ~E_NOTICE");
     if(isset($_POST['MM_form']) and $_POST['MM_form']=='form1'){
-        $start=microtime();
         $number01=$_POST['number01'];
         $gen=3;
         $i=2;
         echo "<p>尋找到第1個質數:2</p>";
+        $start=microtime(true);
         while($i<=$number01){
             if(chk_prime($gen)){
                 echo "<p>尋找到第".$i."個質數:".$gen."</p>";
@@ -38,7 +38,7 @@
                 $gen+=2;
             }
         }
-        $end=microtime();
+        $end=microtime(true);
         echo"<p>所需時間:".(($end-$start)*1000)."ms</p>";
     }
     function chk_prime($intnumber){

@@ -1,21 +1,24 @@
 #header {
-	width: 850px;
-	margin-top: 118px;
-	margin-right: auto;
-	margin-left: auto;
+    width: 850px;
+    margin-top: 58px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #content {
-	width:100%;
-	float: center;
+    width: 100%;
+    float: center;
 }
 
 #footer {
-        background-image: url(images/02.gif);
-        background-repeat: repeat-x;
-        width: 100%;
-        height: 300px;
-        text-align: center;
+    position: relative;
+    top: -100px;
+    background-image: url(images/02.gif);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 300px;
+    z-index: -1;
+    text-align: center;
 }
 
 a {
@@ -24,10 +27,10 @@ a {
 }
 
 h1 {
-    background-color: #2aacaa;
+    /* background-color: #2aacaa; */
     color: #fff;
     font-size: 40px;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
 }
 
@@ -35,49 +38,145 @@ h1 {
     color: #000;
     border-color: #43b1b0;
 }
-  
+
 .btn-outline-primary:hover {
     color: #fff;
     background-color: #43b1b0;
     border-color: #2aacaa;
 }
-  
-.btn-outline-primary:focus, .btn-outline-primary.focus {
+
+.btn-outline-primary:focus,
+.btn-outline-primary.focus {
     box-shadow: 0 0 0 0.2rem rgba(124, 216, 208, 0.858);
+    background-color: #43b1b0;
+    color: #fff;
 }
-  
-.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+
+.btn-outline-primary.disabled,
+.btn-outline-primary:disabled {
     color: #ffffff;
     background-color: transparent;
 }
-  
-.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
-  .show > .btn-outline-primary.dropdown-toggle {
+
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show>.btn-outline-primary.dropdown-toggle {
     color: #fff;
     background-color: #46fffc;
     border-color: #2aacaa;
 }
-  
-.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,.show > .btn-outline-primary.dropdown-toggle:focus {
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-outline-primary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(76, 237, 255, 0.582);
 }
 
 .grad3 {
-    background: linear-gradient( #2aacaa);
+    /* background: linear-gradient(#2aacaa); */
     animation: grad3 6s infinite;
     animation-delay: 4s;
 }
 
 @keyframes grad3 {
-    0% {opacity: 1.0;}
-    10% {opacity: 0.8;}
-    20% {opacity: 0.6;}
-    30% {opacity: 0.4;}
-    40% {opacity: 0.2;}
-    50% {opacity: 0.1;}
-    60% {opacity: 0.2;}
-    70% {opacity: 0.4;}
-    80% {opacity: 0.6;}
-    90% {opacity: 0.8;}
-    100% {opacity: 1.0;}
+    0% {
+        opacity: 1.0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    20% {
+        opacity: 0.6;
+    }
+
+    30% {
+        opacity: 0.4;
+    }
+
+    40% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    70% {
+        opacity: 0.4;
+    }
+
+    80% {
+        opacity: 0.6;
+    }
+
+    90% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+
+/* .demo-card-wide.mdl-card {
+    width: 512px;
+} */
+
+body {
+    /* color: #fff; */
+    /* height: 176px; */
+    background: linear-gradient(270deg, #28e0b0, #c328e0, #28a1e0, #e0286b) center / cover;
+    background-size: 800% 800%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
