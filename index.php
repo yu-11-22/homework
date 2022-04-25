@@ -17,7 +17,7 @@
 <body style="background-color:#2aacaa">
   <div class="grad3">
     <div id="header">
-      <h1 class="animate__bounceInLeft">php互動式程式設計作業</h1>
+      <h1 class="animate__bounceIn">php互動式程式設計作業</h1>
       <img src="images/01.gif " alt="" class="card-img-top" height="200px">
     </div>
   </div>
