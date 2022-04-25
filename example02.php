@@ -100,6 +100,8 @@
         $str = array();
         $jN = substr($i, -4);
         $jM = substr($i, -8 ,4);
+        $jO = substr($i, -12 ,4);
+        $jP = substr($i, -16 ,4);
         do{
             $aa = 0;
             $c1 = 0;
@@ -120,6 +122,10 @@
             if ($c0 == 1 && $jN < 1000){
                 $str[$c0-1]= "0".$str[$c0-1];
             }elseif ($c0 == 2 && $jM < 1000){
+                $str[$c0-1]= "0".$str[$c0-1];
+            }elseif ($c0 == 3 && $jO < 1000){
+                $str[$c0-1]= "0".$str[$c0-1];
+            }elseif ($c0 == 4 && $jP < 1000){
                 $str[$c0-1]= "0".$str[$c0-1];
             }
             $str[$c0] = ($s == '') ? '' : $s.$unic1_arr[$c0];
