@@ -150,7 +150,11 @@
     <?php
     if(isset($_POST['MM_form']) and $_POST['MM_form']=='form1'){
         echo "<p>轉換值:".$_POST['number01']."</p>";
-        if (mb_substr(num2cht($_POST['number01']),-1,1,"utf-8") == "零"){
+        if(is_numeric($_POST['number01']) == false){
+            echo '<p style="color:#F08851;">所輸入轉換值非純數字，請重新輸入</p>';
+        }elseif(floor($_POST['number01']) != $_POST['number01']){
+            echo '<p style="color:#F08851;">所輸入轉換值非正整數，請重新輸入</p>';
+        }elseif (mb_substr(num2cht($_POST['number01']),-1,1,"utf-8") == "零"){
             echo "<p>轉換結果:".mb_substr(num2cht($_POST['number01']),0,-1,"utf-8")."元整</p>";
         }else{
             echo "<p>轉換結果:".num2cht($_POST['number01'])."元整</p>";
