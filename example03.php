@@ -49,7 +49,7 @@
             return false;
             }
         $chkRange=$intnumber;
-        for($i=2; $i<sqrt($chkRange) ;$i=$i+1){
+        for($i=2; $i<=sqrt($chkRange) ;$i=$i+1){
             if($intnumber % $i ==0){
                 return false;
             }
